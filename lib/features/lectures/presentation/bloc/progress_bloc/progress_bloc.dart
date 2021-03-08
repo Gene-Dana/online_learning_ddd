@@ -13,11 +13,11 @@ part 'progress_bloc.freezed.dart';
 class ProgressBloc extends Bloc<ProgressEvent, ProgressState> {
   final LectureBloc lectureBloc;
   final GetLectureProgress lectureProgress;
-  final Ticker ticker;
+  // final Ticker ticker;
 
   StreamSubscription lectureSubscription;
   ProgressBloc({
-    @required this.ticker,
+    // @required this.ticker,
     @required this.lectureProgress,
     @required this.lectureBloc,
   }) : super(_Initial()) {
@@ -34,6 +34,7 @@ class ProgressBloc extends Bloc<ProgressEvent, ProgressState> {
     );
   }
 
+  Ticker ticker;
   StreamSubscription _subscription;
 
   @override
